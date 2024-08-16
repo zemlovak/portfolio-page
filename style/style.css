@@ -1,0 +1,126 @@
+:root {
+    font-size: 20px;    
+    font-family: "Outfit", sans-serif;
+    font-weight: 100;
+}
+
+.poster {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw; 
+}
+
+.poster:before {
+    z-index: -100;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-image: url(https://i.pinimg.com/originals/95/59/7c/95597c854bac2ca94c63442bd7cd7b07.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.menu {
+    margin-top:0;
+    width: 100%;
+    position: sticky;
+    background-color: transparent;
+}
+
+.menu > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;    
+    align-items: center;   
+    height: 8vh;    
+    margin-top: 1rem;    
+}
+
+.menu > ul > li {
+    margin: 1em;
+    margin-bottom: 0;
+}
+
+.btn {    
+    font-family: "Outfit", sans-serif;
+    background-color: transparent;
+    color: ivory;
+    margin: 1em 2em 0 1em;
+    padding: 0.4rem 1.5rem;
+    border: 1px solid ivory;
+    border-radius: 5pt;
+    box-shadow: 3px 3px 10px 2px black;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+.menu-item {    
+    text-decoration: none;
+}
+
+.poster-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.poster-title {    
+    font-size: 8.3rem;    
+    text-transform: uppercase;
+    font-weight: 500;
+     
+    margin-bottom: 0.2em;
+}
+
+.poster-text{
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
+.poster-text, .poster-title, .menu-item {
+    color: ivory;    
+    text-shadow: 3px 3px 15px black;
+}
+
+#_designer {    
+    color: red;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+footer {
+    background-color: rgba(0,0,0, .8);
+    color: ivory;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    font-size: 0.8rem;
+    font-weight: 100;
+    z-index: 1000;
+}
+
+footer > p {
+        
+    position: sticky;
+    padding: 0.3rem;
+    margin-right: 1rem;
+}
+
