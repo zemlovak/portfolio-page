@@ -1,0 +1,89 @@
+#projects-section {
+  @include section;
+
+  h4 {
+    margin-top: 15%;
+    margin-bottom: 10%;
+    text-align: center;
+    font-family: $font-secondary;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .projects-tile-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    a {
+      margin: 3%;
+      .project-tile {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 251, 251);
+        background-image: url("../../assets/thumbnails/portfolio-page-thumbnail.png");
+        opacity: 90%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 4px 4px 10px black;
+
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          content: "know more";
+          text-shadow: 2px 2px 5px rgb(255, 255, 255);
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.807);
+          transition: left 0.5s ease-in;
+          z-index: 1;
+          color: white; /* Ensures the text is visible */
+          display: flex; /* Centers text horizontally and vertically */
+          align-items: center;
+          justify-content: center;
+          font-size: 1rem; /* Adjust font size as needed */
+          transition: left 0.5s ease-in;
+          z-index: 1; /* Ensure the text appears above the background */
+          pointer-events: none;
+        }
+
+        &:hover::before {
+          left: 0;
+        }
+
+        .project-tile > * {
+          position: relative; /* Keeps content above the background animation */
+          z-index: 1;
+          color: #fff; /* Text color */
+          text-align: center;
+          line-height: 200px; /* Vertically centers text */
+          font-size: 1.5em;
+        }
+      }
+      cursor: pointer;
+
+      
+    }
+  }
+
+  .icons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    margin-top: 2%;
+
+    .icon {
+      width: 5vw;
+      height: auto;
+    }
+  }
+}

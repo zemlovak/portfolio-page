@@ -1,0 +1,150 @@
+#contact-section {
+  @include section;
+
+  // Section title
+  h4 {
+    @include section-title;
+  }
+
+  // Contact form container
+  #contact-form {
+    width: 100%;
+    @include flex-center-center;
+    align-items: flex-start;
+    gap: 2rem;
+
+    // Form left section
+    .form-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      // Custom dropdown for country code
+      .country-select {
+        position: relative;
+        display: inline-block;
+        min-width: 120px; /* Adjust width as needed */
+        font-family: $font-primary;
+        font-weight: 400;
+
+        .select-input {
+          border-radius: 5px;
+          background-color: rgb(115, 111, 111);
+          color: #fff;
+          padding: 10px 15px;
+          cursor: pointer;
+          position: relative;
+          z-index: 0;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 10px;
+
+            rotate: 180deg;
+            width: 20px;
+            height: 20px;
+            background-image: url("../../assets/icons/arrow_up-icon.svg"); /* Replace with your icon */
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: transform 0.3s ease;
+          }
+
+          &.show::after {
+            transform: rotate(180deg);
+          }
+        }
+
+        .select-dropdown {
+          cursor: pointer;
+          overflow: hidden;
+          position: absolute;
+          top: calc(100% + 5px);
+          left: 0;
+          width: 100%;
+          background-color: rgb(115, 111, 111);
+          color: #fff;
+          font-size: 0.8rem;
+          border-radius: 5px;
+          z-index: 100;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          border: 2px solid black;
+          box-shadow: 4px 4px 6px rgba(0, 0, 0, .5);
+
+          &.hidden {
+            display: none;
+          }
+
+          li {
+            padding: 1% 2%;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease;
+
+            &:hover {
+              background-color: #f0f0f0;
+              color: #333;
+            }
+          }
+        }
+      }
+
+      // Phone input and dropdown container
+      .phone-div {
+        display: flex;
+        gap: 10px; /* Space between dropdown and phone input */
+        align-items: center;
+
+        input[type="tel"] {
+          flex: 1;
+          border-radius: 5px;
+          padding: 10px 15px;
+        }
+      }
+    }
+
+    // Form right section
+    .form-right {
+      height: 100%;
+      flex: 1;
+      margin-bottom: 2rem;
+
+      textarea {
+        background-color: rgb(115, 111, 111);
+        color: #fff;
+        width: 100%;
+        min-height: 437px;
+        border: none;
+        border-radius: 8px;
+        padding: 3rem 2rem;
+        margin: 0.3rem 0;
+      }
+    }
+
+    input,
+    .select-dropdown {
+      width: 100%;
+      padding: 15%; /* Adjust this to a percentage or rem based on form needs */
+      margin: 0.3rem 0;
+      border: none;
+      border-radius: 8px;
+      background-color: rgb(115, 111, 111);
+      color: #fff;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #fff;
+      opacity: 1;
+    }
+  }
+
+  button {
+    align-self: flex-end;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}

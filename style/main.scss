@@ -1,0 +1,20 @@
+@import "./fonts";
+@import "./mixins";
+
+@import "./components/buttons";
+@import "./components/heroe-section";
+@import "./components/navbar";
+@import "./components/projects-section";
+@import "./components/about-section";
+@import "./components/contact-section";
+@import "./components/footer";
+
+
+body {
+  @include flex-start-center;
+  flex-direction: column;
+  font-family: $font-primary;
+  font-weight: 100;
+}
+
+

@@ -1,0 +1,46 @@
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 1;
+
+    li:first-child {
+      padding-left: 7rem;
+      font-weight: 800;
+    }
+    li:last-child {
+      padding-right: 7rem;
+
+    }
+  }
+
+  li a {
+    color: #fff;
+    position: relative;
+    padding: 0 1rem;    
+
+    &::after {
+        content: ""; 
+        position: absolute;
+        left: 5%;
+        bottom: -8px; 
+        width: 0;
+        height: 2px; 
+        background-color: #fff; 
+        transition: width 0.3s ease-in-out; 
+      }
+      
+      &:hover::after {
+        width: 90%; 
+      }
+
+    
+  }
+}

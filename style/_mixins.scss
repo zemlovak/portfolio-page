@@ -1,0 +1,36 @@
+@mixin flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-start-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin section { 
+  
+  @include flex-start-center;
+  width: 100%;
+  min-height: 100vh;
+  
+  flex-direction: column;
+}
+
+@mixin section-title {
+    margin-top: 15%;
+    margin-bottom: 10%;
+    text-align: center;
+    font-family: $font-secondary;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.container {
+    width: 80%;
+    @include flex-center-center;
+    flex-direction: column;
+  
+  }

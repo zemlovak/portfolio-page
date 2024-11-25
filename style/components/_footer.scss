@@ -1,0 +1,39 @@
+#footer {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+
+  color: #fff;
+  background-color: rgb(53, 53, 53);
+
+  box-shadow: -5px 0 10px black;
+
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    .credits {
+      font-size: 1.2rem;
+    }
+
+    .socials {
+      display: flex;
+
+      transition: transform 0.2s ease;
+
+      & img:hover {
+        transform: scale(1.15);
+      }
+
+      img {
+        margin-left: 1rem;
+        max-width: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+#about-section {
+    @include section;
+    background-color: rgb(53, 53, 53);
+    color: #fff;
+
+    h4 {
+        @include section-title;
+
+    }
+
+    .headshot {
+        width: 12rem;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 4px 4px 10px black;
+        filter: grayscale(100%);    
+
+        margin-bottom: 2rem;             
+        
+    }
+
+    .about-text-container {
+        @include flex-center-center;
+        align-items: baseline;
+
+
+        .about-text {
+            span {
+                font-weight: 400;
+                font-size: 1.1rem;
+            }
+
+            width: 45%;
+            margin-right: 2.5%;
+            padding: 4%;
+            text-align: justify;
+        }
+
+        .skills-and-techstack {
+            span {
+                font-weight: 400;
+                font-size: 1.1rem;
+            }
+
+            width: 45%;
+            margin-left: 2.5%;
+            padding: 4%;
+
+
+            ul li {
+                list-style: '~  ';
+
+           }
+
+           .cta-btn {
+            margin-top: 2rem;
+           }
+            
+
+
+        }
+    }
+}
+
